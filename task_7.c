@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include <stdio.h>
 
 long long count_seq_without_triple_ones(int n) {

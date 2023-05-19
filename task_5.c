@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include <stdio.h>
 
 void scan_array(int n, int m, int a[n][m]) {

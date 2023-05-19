@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include <stdio.h>
 
 // n needs to be even 
