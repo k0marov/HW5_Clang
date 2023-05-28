@@ -1,10 +1,16 @@
 #include <stdio.h>
 
+void swap(int* a, int* b) {
+  int tmp = *a; 
+  *a = *b; 
+  *b = tmp; 
+}
+
 // n needs to be even 
-void swap_halves(int n, int a[n], int res[n]) {
+void swap_halves(int n, int a[n]) {
   int middle = n/2; 
-  for (int i = 0; i < n; ++i) {
-    res[i] = i >= middle ? a[i-middle] : a[middle+i]; 
+  for (int i = 0; i < middle; ++i) {
+    swap(a+i, a+i+middle);
   }
 }
 
@@ -23,11 +29,11 @@ void print_array(int n, int a[n]) {
 int main() {
   int n; 
   scanf("%d", &n); 
-  int a[n], b[n]; 
+  int a[n]; 
 
   scan_array(n, a); 
-  swap_halves(n, a, b); 
-  print_array(n, b);
+  swap_halves(n, a); 
+  print_array(n, a);
 
   return 0;
 }
