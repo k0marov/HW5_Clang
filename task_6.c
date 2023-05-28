@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 void scan_array(int n, int a[n]) {
   for (int i = 0; i < n; ++i) {
@@ -19,7 +18,7 @@ int abs_arr(int a[], int n) {
   for (int* p = a; p < a+n; ++p) {
     if (*p < 0) {
       ++changed;
-      *p = abs(*p);
+      *p *= -1;
     }
   }
   return changed;
